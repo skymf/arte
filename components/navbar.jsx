@@ -56,7 +56,7 @@ const Navbar = () => {
         <nav className="flex justify-between items-center py-8 lg:py-4 px-2">
             <div className = "flex items-center gap-[2]">
                     <span className = "font-bold">
-                        L'ARTE GALLERY
+                        L&aposARTE GALLERY
                     </span>
             </div>
 
@@ -87,7 +87,7 @@ const Navbar = () => {
             >
             <div className="flex h-full flex-col">
                 <div className="flex justify-between">
-                <h1 className="text-lg">L'Arte Gallery</h1>
+                <h1 className="text-lg">L&aposArte Gallery</h1>
                 <p
                     className="cursor-pointer text-md text-[#aeab7b]"
                     onClick={toggleMenu}

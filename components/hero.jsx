@@ -3,6 +3,10 @@ import React from 'react'
 
 export default function Hero() {
   return (
-    <div>a</div>
+    <section className = "flex px-12">
+        <div>
+            abc
+        </div>
+    </section>
   )
 }
