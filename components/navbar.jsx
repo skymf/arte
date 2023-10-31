@@ -102,17 +102,14 @@ const Navbar = () => {
                 exit="initial"
                 className="flex flex-col h-full justify-center font-lora items-center gap-4 "
                 >
-                {navLinks.map((link, index) => {
-  return (
-    <div className="overflow-hidden" key={index}>
-      <MobileNavLink
-        key={index}
-        title={link.title}
-        href={link.href}
-      />
-    </div>
-  );
-})}
+               {navLinks.map((link, index) => (
+  <MobileNavLink
+    key={index}
+    title={link.title}
+    href={link.href}
+  />
+))}
+
 
                 </motion.div>
             </div>
