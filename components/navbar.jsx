@@ -84,12 +84,12 @@ const Navbar = () => {
             >
             <div className="flex h-full flex-col">
                 <div className="flex justify-between">
-                <h1 className="text-lg">L'Arte Gallery</h1>
+                <h1 className="text-lg">LArte Gallery</h1>
                 <p
                     className="cursor-pointer text-md text-[#aeab7b]"
                     onClick={toggleMenu}
                 >
-                    Close
+                    CLOSE
                 </p>
                 </div>
                 <motion.div
