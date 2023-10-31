@@ -58,17 +58,18 @@ export default function AnimatedLink({ title }) {
       },
     },          
   };
-const AnimatedLetter = ({ character, animation, key }) => {
-  return (
-    <motion.span
-      variants={animation}
-      className="relative inline-block whitespace-nowrap"
-      key = {key}
-    >
-      {character}
-    </motion.span>
-  );
-};
+  const AnimatedLetter = ({ character, animation }) => {
+    return (
+      <motion.span
+        key={character} // Place the key prop on the topmost element in the map function
+        variants={animation}
+        className="relative inline-block whitespace-nowrap"
+      >
+        {character}
+      </motion.span>
+    );
+  };
+  
 const AnimatedWord = ({ title, animation, isHovered }) => {
   return (
     <motion.span
