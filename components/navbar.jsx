@@ -100,11 +100,12 @@
                     exit="initial"
                     className="flex flex-col h-full justify-center font-lora items-center gap-4 "
                     >
-                    {navLinks.map((link) => (
-                    <div className="overflow-hidden" key={link.key}>
-                    <MobileNavLink title={link.title} href={link.href} />
-                    </div>
-                    ))}
+                    {navLinks.map((link, i) => (
+  <div className="overflow-hidden" key={link.title + i}>
+    <MobileNavLink title={link.title} href={link.href} />
+  </div>
+))}
+
 
                     </motion.div>
                 </div>
