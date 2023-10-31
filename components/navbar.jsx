@@ -101,6 +101,9 @@ const Navbar = () => {
                 className="flex flex-col h-full justify-center font-lora items-center gap-4 "
                 >
                 {navLinks.map((link, i) => {
+                    {/*
+  // eslint-disable-next-line react/jsx-key
+*/}
                     return (
                     <div className="overflow-hidden">
                         <MobileNavLink
