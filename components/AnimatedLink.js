@@ -70,23 +70,23 @@ export default function AnimatedLink({ title }) {
     );
   };
   
-const AnimatedWord = ({ title, animation, isHovered }) => {
-  return (
-    <motion.span
-        variants={titleAnimation}
-        initial="rest"
-        animate={isHovered ? "hover" : "rest"}
-        className="whitespace-nowrap relative"
-    >
-    {title
-        .split("")
-        .map((character, i) =>
-            character === " " ? (
-            <span key={i}>&nbsp;</span>
-            ) : (
-                <AnimatedLetter character={character} animation={animation} />
-            )
-        )}
-    </motion.span>
-  );
-};
+  const AnimatedWord = ({ title, animation, isHovered }) => {
+    return (
+      <motion.span
+          variants={titleAnimation}
+          initial="rest"
+          animate={isHovered ? "hover" : "rest"}
+          className="whitespace-nowrap relative"
+      >
+      {title
+          .split("")
+          .map((character, i) =>
+              character === " " ? (
+              <span key={i}>&nbsp;</span>
+              ) : (
+                  <AnimatedLetter key={i} character={character} animation={animation} />
+              )
+          )}
+      </motion.span>
+    );
+  };
