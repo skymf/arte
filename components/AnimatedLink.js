@@ -58,11 +58,12 @@ export default function AnimatedLink({ title }) {
       },
     },          
   };
-const AnimatedLetter = ({ character, animation }) => {
+const AnimatedLetter = ({ character, animation, key }) => {
   return (
     <motion.span
       variants={animation}
       className="relative inline-block whitespace-nowrap"
+      key = {key}
     >
       {character}
     </motion.span>
