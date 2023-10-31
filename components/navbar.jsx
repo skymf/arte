@@ -70,9 +70,8 @@ const Navbar = () => {
                 <AnimatedLink title={"contact"} />
             </div>
         <div
-            className="cursor-pointer lg:hidden text-md"
-            onClick={toggleMenu}
-        >
+            className="cursor-pointer lg:hidden text-md font-bold"
+            onClick={toggleMenu}>
             MENU
         </div>
     </nav>
