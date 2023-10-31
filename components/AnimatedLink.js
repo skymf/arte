@@ -81,11 +81,9 @@ const AnimatedWord = ({ title, animation, isHovered }) => {
     >
       {title.split("").map((character, i) =>
   character === " " ? (
-    // eslint-disable-next-line react/jsx-key
     <span key={i}>&nbsp;</span>
   ) : (
-    <AnimatedLetter key={character + i} character={character} animation={animation} />
-  )
+    <AnimatedLetter key={character + i} character={character} animation={animation} />  )
 )}
     </motion.span>
   );
