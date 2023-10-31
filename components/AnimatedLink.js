@@ -62,7 +62,7 @@ const letterAnimationTwo = {
 const AnimatedLetter = ({ character, animation }) => {
   return (
     <motion.span
-      key={character} // Place the key prop on the topmost element in the map function
+      key={character}
       variants={animation}
       className="relative inline-block whitespace-nowrap"
     >
@@ -80,12 +80,13 @@ const AnimatedWord = ({ title, animation, isHovered }) => {
       className="whitespace-nowrap relative"
     >
       {title.split("").map((character, i) =>
-        character === " " ? (
-          <span key={i}>&nbsp;</span>
-        ) : (
-          <AnimatedLetter key={character + i} character={character} animation={animation} />
-        )
-      )}
+  character === " " ? (
+    // eslint-disable-next-line react/jsx-key
+    <span key={i}>&nbsp;</span>
+  ) : (
+    <AnimatedLetter key={character + i} character={character} animation={animation} />
+  )
+)}
     </motion.span>
   );
 };
