@@ -53,13 +53,10 @@ const Navbar = () => {
 
   return (
     <header>
-        <nav className="flex justify-between items-center py-8 lg:py-4 px-2">
-            <div className = "flex items-center gap-[2]">
-                    <span className = "font-bold">
-                        L'ARTE GALLERY
-                    </span>
+        <nav className="flex justify-between items-center py-8 lg:py-4 px-12">
+            <div className = "font-bold px-12">
+                LARTEGALLERY
             </div>
-
             <div className="lg:flex hidden gap-12 text-md text-zinc-400">
                 <Link href="#" className="font-medium text-[#aeab7b]">
                 <AnimatedLink title={"home"} />
@@ -70,8 +67,9 @@ const Navbar = () => {
                 <AnimatedLink title={"contact"} />
             </div>
         <div
-            className="cursor-pointer lg:hidden text-md font-bold"
-            onClick={toggleMenu}>
+            className="cursor-pointer lg:hidden text-md"
+            onClick={toggleMenu}
+        >
             MENU
         </div>
     </nav>
