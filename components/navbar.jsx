@@ -55,7 +55,7 @@ const Navbar = () => {
     <header>
         <nav className="flex justify-between items-center py-8 lg:py-4 px-2">
             <div className = "flex items-center gap-[2]">
-                    <span>
+                    <span className = "font-bold">
                         L'ARTE GALLERY
                     </span>
             </div>
