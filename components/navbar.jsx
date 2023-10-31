@@ -103,48 +103,49 @@ const Navbar = () => {
                 className="flex flex-col h-full justify-center font-lora items-center gap-4 "
                 >
                 {navLinks.map((link, index) => {
-                    return (
-                    <div className="overflow-hidden">
-                        <MobileNavLink
-                        key={index}
-                        title={link.title}
-                        href={link.href}
-                        />
-                    </div>
-                    );
-                })}
+  return (
+    <div className="overflow-hidden" key={index}>
+      <MobileNavLink
+        key={index}
+        title={link.title}
+        href={link.href}
+      />
+    </div>
+  );
+})}
+
                 </motion.div>
             </div>
             </motion.div>
         )}
         </AnimatePresence>
     </header>
-  );
+    );
 };
 export default Navbar;
-const mobileLinkVars = {
-  initial: {
-    y: "30vh",
-    transition: {
-      duration: 0.5,
-      ease: [0.37, 0, 0.63, 1],
+    const mobileLinkVars = {
+    initial: {
+        y: "30vh",
+        transition: {
+        duration: 0.5,
+        ease: [0.37, 0, 0.63, 1],
+        },
     },
-  },
-  open: {
-    y: 0,
-    transition: {
-      ease: [0, 0.55, 0.45, 1],
-      duration: 0.7,
+    open: {
+        y: 0,
+        transition: {
+            ease: [0, 0.55, 0.45, 1],
+            duration: 0.7,
+        },
     },
-  },
 };
 const MobileNavLink = ({ title, href }) => {
-  return (
+return (
     <motion.div
-      variants={mobileLinkVars}
-      className="text-5xl uppercase text-[#aeab7b] hover:text-[#dedcff]"
+        variants={mobileLinkVars}
+        className="text-5xl uppercase text-[#aeab7b] hover:text-[#dedcff]"
     >
-      <Link href={href}>{title}</Link>
+        <Link href={href}>{title}</Link>
     </motion.div>
-  );
+    );
 };
