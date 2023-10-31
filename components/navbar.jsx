@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 "use client";
 import Link from "next/link";
 import { React, useState } from "react";
