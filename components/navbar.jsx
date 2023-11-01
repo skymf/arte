@@ -1,10 +1,9 @@
-    /* eslint-disable react/jsx-props-no-spreading */
-    "use client";
-    import Link from "next/link";
-    import { React, useState } from "react";
-    import AnimatedLink from "./AnimatedLink";
-    import { AnimatePresence, motion } from "framer-motion";
-
+"use client";
+import Link from "next/link";    
+import { React, useState } from "react";
+import AnimatedLink from "./AnimatedLink";
+import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
     const navLinks = [
         { title: "Home", href: "/", key: "home" },
         { title: "Few pretty works", href: "/projects", key: "projects" },
@@ -55,17 +54,30 @@
     return (
         <header>
             <nav className="flex justify-between items-center py-8 lg:py-4 px-12">
-                <div className = "font-bold px-12">
-                    LARTEGALLERY
+                <div className = "flex flex-row gap-2">
+                    <Image 
+                        src = "/23e1.jpg" 
+                        width = "25"
+                        height = "25"
+                        className = "rouned-full"
+                    />
+                    <div className = "font-bold text-xl">
+                        {"L'ARTEGALLERY"}
+                    </div>
                 </div>
                 <div className="lg:flex hidden gap-12 text-md text-zinc-400">
                     <Link href="#" className="font-medium text-[#aeab7b]">
-                    <AnimatedLink title={"home"} />
+                    <AnimatedLink title={"HOME"} />
                     </Link>
-                    <Link href={"/Projects"}>
-                    <AnimatedLink title={"projects"} />
+                    <Link href={"/projects"}>
+                    <AnimatedLink title={"FEW PRETTY WORKS"} />
                     </Link>
-                    <AnimatedLink title={"contact"} />
+                    <Link href = "#">
+                    <AnimatedLink title={"CONTACT ME"} />
+                    </Link>
+                    <Link href = "#">
+                    <AnimatedLink title={"UH"}/>
+                    </Link>
                 </div>
             <div
                 className="cursor-pointer lg:hidden text-md"
@@ -81,34 +93,32 @@
                 initial="initial"
                 animate="animate"   
                 exit="exit"
-                className="fixed left-0 top-0 w-full h-screen origin-top bg-[#4C0611] text-[#aeab7b] p-10"
+                className="fixed left-0 top-0 w-full h-screen origin-top bg-[#050A50] text-[#848DAB] p-10"
                 >
-                <div className="flex h-full flex-col">
-                    <div className="flex justify-between">
-                    <h1 className="text-lg">LArte Gallery</h1>
-                    <p
+                    <div className="flex h-full flex-col">
+                        <div className="flex justify-between">
+                        <h1 className="text-lg">
+                        {"L'ARTEGALLERY"}
+                        </h1>
+                        <p
                         className="cursor-pointer text-md text-[#aeab7b]"
-                        onClick={toggleMenu}
-                    >
-                        CLOSE
-                    </p>
+                            onClick={toggleMenu}>
+                            CLOSE
+                        </p>
+                        </div>
+                        <motion.div
+                        variants={containerVars}
+                        initial="initial"
+                        animate="open"
+                        exit="initial"
+                        className="flex flex-col h-full justify-center font-lora items-center gap-4">
+                            {navLinks.map((link, i) => (
+                            <div className="overflow-hidden" key={link.title + i}>
+                                <MobileNavLink title={link.title} href={link.href} />
+                            </div>
+                            ))}
+                        </motion.div>
                     </div>
-                    <motion.div
-                    variants={containerVars}
-                    initial="initial"
-                    animate="open"
-                    exit="initial"
-                    className="flex flex-col h-full justify-center font-lora items-center gap-4 "
-                    >
-                    {navLinks.map((link, i) => (
-  <div className="overflow-hidden" key={link.title + i}>
-    <MobileNavLink title={link.title} href={link.href} />
-  </div>
-))}
-
-
-                    </motion.div>
-                </div>
                 </motion.div>
             )}
             </AnimatePresence>
@@ -136,7 +146,7 @@
     return (
         <motion.div
         variants={mobileLinkVars}
-        className="text-5xl uppercase text-[#aeab7b] hover:text-[#dedcff]"
+        className="text-5xl uppercase text-[#848DAB] hover:text-[#aeab7b]"
         >
         <Link href={href}>{title}</Link>
         </motion.div>
