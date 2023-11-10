@@ -5,7 +5,7 @@ import AnimatedLink from "./AnimatedLink";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
     const navLinks = [
-        { title: "Home", href: "/hero", key: "herox" },
+        { title: "Home", href: "/hero", key: "hero" },
         { title: "works", href: "/gallery", key: "gallery" },
         { title: "Contact me!", href: "/contact", key: "contact" },
         { title: "other websites", href: "/other", key: "other" },
@@ -93,7 +93,7 @@ import Image from "next/image";
                 initial="initial"
                 animate="animate"   
                 exit="exit"
-                className="fixed left-0 top-0 w-full h-screen origin-top bg-[#050A50] text-[#848DAB] p-10"
+                className="fixed left-0 top-0 z-10 w-full h-screen origin-top bg-[#050A50] text-[#848DAB] p-10"
                 >
                     <div className="flex h-full flex-col">
                         <div className="flex justify-between">
@@ -111,7 +111,7 @@ import Image from "next/image";
                         initial="initial"
                         animate="open"
                         exit="initial"
-                        className="flex flex-col h-full justify-center font-lora items-center gap-4">
+                        className="flex flex-col h-full justify-center bg-[#050A50] items-center gap-4">
                             {navLinks.map((link, i) => (
                             <div className="overflow-hidden" key={link.title + i}>
                                 <MobileNavLink title={link.title} href={link.href} />
