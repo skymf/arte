@@ -12,7 +12,7 @@ export default function Gallery() {
           THE PROJECTS
         </h1>
 
-        <div className="grid w-full place-content-center bg-gradient-to-br from-indigo-500 to-violet-500 px-4 py-12 text-slate-900">
+        <div className="grid w-full place-content-center px-4 py-12 text-black">
           <TiltCard />
         </div>
       </div>
