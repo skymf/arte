@@ -5,8 +5,8 @@ import AnimatedLink from "./AnimatedLink";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
     const navLinks = [
-        { title: "Home", href: "/", key: "home" },
-        { title: "Few pretty works", href: "/projects", key: "projects" },
+        { title: "Home", href: "/hero", key: "herox" },
+        { title: "works", href: "/gallery", key: "gallery" },
         { title: "Contact me!", href: "/contact", key: "contact" },
         { title: "other websites", href: "/other", key: "other" },
     ];      
