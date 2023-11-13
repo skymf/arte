@@ -2,7 +2,7 @@
 import React from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FiMousePointer } from "react-icons/fi";
-
+import Image from 'next/image';
 
 export default function Gallery() {
   return (
@@ -77,6 +77,11 @@ export default function Gallery() {
           }}
           className="absolute inset-4 grid place-content-center rounded-xl bg-white shadow-lg"
         >
+          <Image 
+            src = "/b0b78a531c06d6795ca61748fc027b34.jpg"
+            height = "300"
+            width = "300"
+          />
           <FiMousePointer
             style={{
               transform: "translateZ(75px)",

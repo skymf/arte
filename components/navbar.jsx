@@ -6,8 +6,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
     const navLinks = [
         { title: "Home", href: "/hero", key: "hero" },
-        { title: "works", href: "/gallery", key: "gallery" },
-        { title: "Contact me!", href: "/contact", key: "contact" },
+        { title: "works", href: "/projects", key: "projects" },
+        { title: "contact me!", href: "/contact", key: "contact" },
         { title: "other websites", href: "/other", key: "other" },
     ];      
     const Navbar = () => {
@@ -69,7 +69,7 @@ import Image from "next/image";
                     <Link href="#" className="font-medium text-[#aeab7b]">
                     <AnimatedLink title={"HOME"} />
                     </Link>
-                    <Link href={"/projects"}>
+                    <Link href="/projects">
                     <AnimatedLink title={"FEW PRETTY WORKS"} />
                     </Link>
                     <Link href = "#">
