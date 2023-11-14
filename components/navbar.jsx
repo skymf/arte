@@ -69,7 +69,7 @@ import Image from "next/image";
                     <Link href="#" className="font-medium text-[#aeab7b]">
                     <AnimatedLink title={"HOME"} />
                     </Link>
-                    <Link href="/projects">
+                    <Link href={`/projects`}>
                     <AnimatedLink title={"FEW PRETTY WORKS"} />
                     </Link>
                     <Link href = "#">
@@ -112,19 +112,25 @@ import Image from "next/image";
                         animate="open"
                         exit="initial"
                         className="flex flex-col h-full justify-center bg-[#050A50] items-center gap-4">
-                            {navLinks.map((link, i) => (
-                            <div className="overflow-hidden" key={link.title + i}>
-                                <MobileNavLink title={link.title} href={link.href} />
+                            {navLinks.map((link, index) => {
+                            return (
+                            <div className="overflow-hidden">
+                              <MobileNavLink
+                                key={index}
+                                title={link.title}
+                                href={link.href}
+                              />
                             </div>
-                            ))}
-                        </motion.div>
+                          );
+                        })}
+                      </motion.div>
                     </div>
-                </motion.div>
-            )}
-            </AnimatePresence>
-        </header>
-    );
-    };
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </header>
+            );
+          };
     export default Navbar;
     const mobileLinkVars = {
     initial: {
@@ -148,7 +154,9 @@ import Image from "next/image";
         variants={mobileLinkVars}
         className="text-5xl uppercase text-[#848DAB] hover:text-[#aeab7b]"
         >
-        <Link href={href}>{title}</Link>
+        <Link href={href} passHref legacyBehavior>
+      <a>{title}</a>
+      </Link>
         </motion.div>
     );
     };

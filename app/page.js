@@ -22,6 +22,8 @@ export default function Home() {
     <Gallery/>
     </Reveal>
 
+
+
     <Footer />
     </main>
   )
