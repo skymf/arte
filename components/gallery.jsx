@@ -32,13 +32,13 @@ const TiltCard = ({ item }) => {
 
   const rotateX = useTransform(
     mouseYSpring,
-    [-0.5, 0.5],
-    ["17.5deg", "-17.5deg"]
+    [-0.75, 0.75],
+    ["7.5deg", "-7.5deg"]
   );
   const rotateY = useTransform(
     mouseXSpring,
-    [-0.5, 0.5],
-    ["-17.5deg", "17.5deg"]
+    [-0.75, 0.75],
+    ["-7.5deg", "7.5deg"]
   );
 
   const handleMouseMove = (e) => {
