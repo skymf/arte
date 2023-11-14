@@ -5,10 +5,10 @@ import AnimatedLink from "./AnimatedLink";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
     const navLinks = [
-        { title: "Home", href: "/hero", key: "hero" },
+        { title: "Home", href: "/", key: "hero" },
         { title: "works", href: "/projects", key: "projects" },
         { title: "contact me!", href: "/contact", key: "contact" },
-        { title: "other websites", href: "/other", key: "other" },
+        { title: "other", href: "/other", key: "other" },
     ];      
     const Navbar = () => {
     const [open, setOpen] = useState(false);
@@ -54,25 +54,16 @@ import Image from "next/image";
     return (
         <header>
             <nav className="flex justify-between items-center py-8 lg:py-4 px-12">
-                <div className = "flex flex-row gap-2">
-                    <Image 
-                        src = "/23e1.jpg" 
-                        width = "25"
-                        height = "25"
-                        className = "rouned-full"
-                    />
+                <Link href = "/" className = "flex flex-row gap-2">
                     <div className = "font-bold text-xl">
                         {"L'ARTEGALLERY"}
                     </div>
-                </div>
+                </Link>
                 <div className="lg:flex hidden gap-12 text-md text-zinc-400">
-                    <Link href="#" className="font-medium text-[#aeab7b]">
-                    <AnimatedLink title={"HOME"} />
-                    </Link>
                     <Link href={`/projects`}>
                     <AnimatedLink title={"FEW PRETTY WORKS"} />
                     </Link>
-                    <Link href = "#">
+                    <Link href = {`/contact`}>
                     <AnimatedLink title={"CONTACT ME"} />
                     </Link>
                     <Link href = "#">
@@ -97,9 +88,9 @@ import Image from "next/image";
                 >
                     <div className="flex h-full flex-col">
                         <div className="flex justify-between">
-                        <h1 className="text-lg">
+                        <Link href = "/" className="text-lg">
                         {"L'ARTEGALLERY"}
-                        </h1>
+                        </Link>
                         <p
                         className="cursor-pointer text-md text-[#aeab7b]"
                             onClick={toggleMenu}>
@@ -114,7 +105,7 @@ import Image from "next/image";
                         className="flex flex-col h-full justify-center bg-[#050A50] items-center gap-4">
                             {navLinks.map((link, index) => {
                             return (
-                            <div className="overflow-hidden">
+                            <div className="overflow-hidden" onClick={toggleMenu}>
                               <MobileNavLink
                                 key={index}
                                 title={link.title}

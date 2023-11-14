@@ -15,6 +15,7 @@ export default function Gallery() {
           <TiltCard item={items[1]} />
           <TiltCard item={items[2]} />
           <TiltCard item={items[3]} />
+          {/* dont want these */}
           {/* <TiltCard item={items[4]} />
           <TiltCard item={items[5]} /> */}
         </div>

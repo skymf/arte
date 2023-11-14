@@ -1,6 +1,6 @@
 import { Work_Sans } from 'next/font/google'
 import './globals.css'
-
+import Navbar from '@/components/navbar'
 const works = Work_Sans({ subsets: ['latin'] })
 
 export const metadata = {
@@ -11,7 +11,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`bg-[#4C0611] text-[#aeab7b] !scroll-smooth ${works.className}`}>{children}</body>
+      <body 
+      className={`bg-[#4C0611] text-[#aeab7b] !scroll-smooth ${works.className}`}>
+      <Navbar/>
+        {children}
+      </body>
     </html>
   )
 }

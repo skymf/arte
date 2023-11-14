@@ -9,8 +9,6 @@ import Footer from '@/components/footer';
 export default function Home() {
   return (
       <main>
-      <Navbar/>
-
       <Reveal>
       <Hero/>
       </Reveal>
