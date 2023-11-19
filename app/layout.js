@@ -1,6 +1,9 @@
 import { Work_Sans } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar'
+import { Analytics } from '@vercel/analytics/react';
+
+
 const works = Work_Sans({ subsets: ['latin'] })
 
 export const metadata = {
@@ -15,6 +18,7 @@ export default function RootLayout({ children }) {
       className={`bg-[#4C0611] text-[#aeab7b] !scroll-smooth ${works.className}`}>
       <Navbar/>
         {children}
+        <Analytics />
       </body>
     </html>
   )

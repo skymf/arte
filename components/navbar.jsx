@@ -59,24 +59,25 @@ import Image from "next/image";
                         {"L'ARTEGALLERY"}
                     </div>
                 </Link>
-                <div className="lg:flex hidden gap-12 text-md text-zinc-400">
-                    <Link href={`/projects`}>
-                    <AnimatedLink title={"FEW PRETTY WORKS"} />
-                    </Link>
-                    <Link href = {`/contact`}>
-                    <AnimatedLink title={"CONTACT ME"} />
-                    </Link>
-                    <Link href = "#">
-                    <AnimatedLink title={"UH"}/>
-                    </Link>
+                    <div className="lg:flex hidden gap-12 text-md text-zinc-400">
+                        <Link href={`/projects`}>
+                        <AnimatedLink title={"FEW PRETTY WORKS"} />
+                        </Link>
+
+                        <Link href = {`/contact`}>
+                        <AnimatedLink title={"CONTACT ME"} />
+                        </Link>
+
+                        <Link href = "#">
+                        <AnimatedLink title={"UH"}/>
+                        </Link>
+                    </div>
+                <div
+                    className="cursor-pointer lg:hidden text-md"
+                    onClick={toggleMenu}>
+                    MENU
                 </div>
-            <div
-                className="cursor-pointer lg:hidden text-md"
-                onClick={toggleMenu}
-            >
-                MENU
-            </div>
-        </nav>
+            </nav>
             <AnimatePresence>
             {open && (
                 <motion.div
@@ -84,44 +85,42 @@ import Image from "next/image";
                 initial="initial"
                 animate="animate"   
                 exit="exit"
-                className="fixed left-0 top-0 z-10 w-full h-screen origin-top bg-[#050A50] text-[#848DAB] p-10"
-                >
+                className="fixed left-0 top-0 z-10 w-full h-screen origin-top bg-[#050A50] text-[#848DAB] p-10">
                     <div className="flex h-full flex-col">
                         <div className="flex justify-between">
-                        <Link href = "/" className="text-lg">
-                        {"L'ARTEGALLERY"}
-                        </Link>
-                        <p
-                        className="cursor-pointer text-md text-[#aeab7b]"
-                            onClick={toggleMenu}>
-                            CLOSE
-                        </p>
+                            <Link href = "/" className="text-lg">
+                            {"L'ARTEGALLERY"}
+                            </Link>
+                            <p
+                            className="cursor-pointer text-md text-[#aeab7b]"
+                                onClick={toggleMenu}>
+                                CLOSE
+                            </p>
                         </div>
                         <motion.div
-                        variants={containerVars}
-                        initial="initial"
-                        animate="open"
-                        exit="initial"
-                        className="flex flex-col h-full justify-center bg-[#050A50] items-center gap-4">
-                            {navLinks.map((link, index) => {
+                            variants={containerVars}
+                            initial="initial"
+                            animate="open"
+                            exit="initial"
+                            className="flex flex-col h-full justify-center bg-[#050A50] items-center gap-4">
+                        {navLinks.map((link, index) => {
                             return (
-                            <div className="overflow-hidden" onClick={toggleMenu}>
-                              <MobileNavLink
-                                key={index}
-                                title={link.title}
-                                href={link.href}
-                              />
-                            </div>
-                          );
+                                <div className="overflow-hidden" onClick={toggleMenu}>
+                                    <MobileNavLink
+                                        key={index}
+                                        title={link.title}
+                                        href={link.href}/>
+                                </div>
+                            );
                         })}
-                      </motion.div>
+                        </motion.div>
                     </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </header>
-            );
-          };
+                </motion.div>
+            )}
+            </AnimatePresence>
+        </header>
+    );        
+};
     export default Navbar;
     const mobileLinkVars = {
     initial: {
@@ -142,12 +141,11 @@ import Image from "next/image";
     const MobileNavLink = ({ title, href }) => {
     return (
         <motion.div
-        variants={mobileLinkVars}
-        className="text-5xl uppercase text-[#848DAB] hover:text-[#aeab7b]"
-        >
-        <Link href={href} passHref legacyBehavior>
-      <a>{title}</a>
-      </Link>
+            variants={mobileLinkVars}
+            className="text-5xl uppercase text-[#848DAB] hover:text-[#aeab7b]">
+            <Link href={href} passHref legacyBehavior>
+                <a>{title}</a>
+            </Link>
         </motion.div>
     );
     };

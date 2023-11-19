@@ -82,7 +82,7 @@ const TiltCard = ({ item }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="absolute inset-5 flex flex-col items-end justify-end p-5 rounded-xl text-white "
+        className="absolute inset-5 flex flex-col items-end justify-end p-5 rounded-xl text-[#F3F1EB] "
       >
         <FiMousePointer
           style={{
