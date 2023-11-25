@@ -8,9 +8,9 @@ export default function Hero() {
             <h1 className = "font-bold text-6xl ">
               MY ART GALLERY
             </h1>
-            <span>
+            <p>
               hey
-            </span>
+            </p>
         </div>
     </section>
   )

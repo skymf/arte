@@ -28,12 +28,12 @@ export default function About() {
                         <div className = "flex flex-col gap-5">
                             {/* buttons */}
                             <div className = "flex flex-row gap-5">
-                                <div className="flex items-center px-3 h-10 sm:h-12 max-w-xs sm:max-w-max rounded-full border border-[#aeab7b] font-medium text-xs sm:text-sm ">
+                                <h2 className="flex items-center px-3 h-10 sm:h-12 max-w-xs sm:max-w-max rounded-full border border-[#aeab7b] font-medium text-xs sm:text-sm ">
                                     GRAPHIC DESIGN
-                                </div> 
-                                <div className="flex items-center px-3 h-10 sm:h-12 max-w-xs sm:max-w-max rounded-full border border-[#aeab7b] font-medium text-xs sm:text-sm">
+                                </h2> 
+                                <h2 className="flex items-center px-3 h-10 sm:h-12 max-w-xs sm:max-w-max rounded-full border border-[#aeab7b] font-medium text-xs sm:text-sm">
                                     VFX EDITING
-                                </div> 
+                                </h2> 
                             </div>
 
                             {/* text */}

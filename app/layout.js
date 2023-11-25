@@ -13,12 +13,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body 
-      className={`bg-[#4C0611] text-[#aeab7b] !scroll-smooth ${works.className}`}>
-      <Navbar/>
+    <html lang="en" className ="h-full">
+      <body
+      className={`relative h-full antialiased bg-[#4C0611] text-[#aeab7b] !scroll-smooth ${works.className}`}>
+        <main className ="relative flex flex-col min-h">
+        <Navbar/>
         {children}
         <Analytics />
+        </main>
       </body>
     </html>
   )

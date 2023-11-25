@@ -90,14 +90,14 @@ const TiltCard = ({ item }) => {
           }}
           className="mx-auto text-4xl"
         />
-        <p
+        <h2
           style={{
             transform: "translateZ(50px)",
           }}
           className="text-center text-2xl font-bold"
         >
           {item.title}
-        </p>
+        </h2>
       </div>
     </motion.div>
   );
