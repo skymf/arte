@@ -9,7 +9,7 @@ export default function Hero() {
               MY ART GALLERY
             </h1>
             <p>
-              hey
+              hey this is pretty
             </p>
         </div>
     </section>

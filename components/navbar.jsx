@@ -3,8 +3,8 @@ import Link from "next/link";
 import { React, useState } from "react";
 import AnimatedLink from "./AnimatedLink";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-    const navLinks = [
+
+const navLinks = [
         { title: "Home", href: "/", key: "hero" },
         { title: "works", href: "/projects", key: "projects" },
         { title: "contact me!", href: "/contact", key: "contact" },
@@ -59,7 +59,7 @@ import Image from "next/image";
                         {"L'ARTEGALLERY"}
                     </div>
                 </Link>
-                    <div className="lg:flex hidden gap-12 text-md text-zinc-400">
+                    <div className="lg:flex hidden gap-12 text-md text-zinc-400 font-medium">
                         <Link href={`/projects`}>
                         <AnimatedLink title={"FEW PRETTY WORKS"} />
                         </Link>
@@ -85,7 +85,7 @@ import Image from "next/image";
                 initial="initial"
                 animate="animate"   
                 exit="exit"
-                className="fixed left-0 top-0 z-10 w-full h-screen origin-top bg-[#050A50] text-[#848DAB] p-10">
+                className="fixed left-0 top-0 z-10 w-full h-screen origin-top bg-[#050A50] text-[#848DAB] font-medium p-10">
                     <div className="flex h-full flex-col">
                         <div className="flex justify-between">
                             <Link href = "/" className="text-lg">
