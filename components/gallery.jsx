@@ -1,19 +1,31 @@
 "use client";
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { FiMousePointer } from "react-icons/fi";
+import Link from "next/link";
 
 export default function Gallery() {
+  // const [isActive, setActive] = useState(false);
   return (
     <section className="mt-20 mb-28 px-12">
       <div className="flex flex-col">
         <h1 className="text-4xl font-bold">MY PROJECTS</h1>
 
         <div className="grid md:gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full md:pr-12">
-          <TiltCard item={items[0]} />
-          <TiltCard item={items[1]} />
-          <TiltCard item={items[2]} />
-          <TiltCard item={items[3]} />
+          <Link href="/projects/star_wars">
+            <TiltCard item={items[0]} />
+          </Link>
+
+          <Link href="/projects/artists">
+            <TiltCard item={items[1]} />
+          </Link>
+
+          <Link href="/projects/movies">
+            <TiltCard item={items[2]} />
+          </Link>
+
+          <Link href="/projects/cars">
+            <TiltCard item={items[3]} />
+          </Link>
           {/* dont want these */}
           {/* <TiltCard item={items[4]} />
           <TiltCard item={items[5]} /> */}
