@@ -7,7 +7,7 @@ export default function Gallery() {
   return (
     <section className="mt-20 mb-28 px-12">
       <div className="flex flex-col">
-        <h1 className="text-4xl font-bold">THE PROJECTS</h1>
+        <h1 className="text-4xl font-bold">MY PROJECTS</h1>
 
         <div className="grid md:gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full md:pr-12">
           <TiltCard item={items[0]} />
@@ -87,7 +87,7 @@ const TiltCard = ({ item }) => {
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-xl font-bold"
+          className="text-center text-lg font-bold"
         >
           {item.title}
         </h2>
@@ -99,32 +99,32 @@ const TiltCard = ({ item }) => {
 const items = [
   {
     url: "/23e1.jpg",
-    title: "GRAPHIC DESIGN",
+    title: "EHMM",
     id: 1,
   },
-  {
-    url: "/8932jkhsbfjrui321.png",
-    title: "VFX EDIT",
-    id: 2,
-  },
-  {
-    url: "/282acccdeifa192.jpg",
-    title: "3D MODELING",
-    id: 3,
-  },
+  // {
+  //   url: "/8932jkhsbfjrui321.png",
+  //   title: "VFX EDIT",
+  //   id: 2,
+  // },
+  // {
+  //   url: "/282acccdeifa192.jpg",
+  //   title: "3D MODELING",
+  //   id: 3,
+  // },
   {
     url: "/b0b78a531c06d6795ca61748fc027b34.jpg",
     title: "JE NE SAIS PAS",
-    id: 4,
+    id: 3,
   },
   {
     url: "/282acccdeifa192.jpg",
-    title: "app design",
+    title: "APP DESIGN",
     id: 4,
   },
   {
-    url: "/282acccdeifa192.jpg",
-    title: "web design",
+    url: "/mm.jpg",
+    title: "WEB DESIGN",
     id: 5,
   },
 ];

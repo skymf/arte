@@ -3,6 +3,7 @@ import Hero from "@/components/hero";
 import About from "@/components/about";
 import Reveal from "@/components/reveal";
 import Gallery from "@/components/gallery";
+import ViewMore from "@/components/viewMore";
 import Footer from "@/components/footer";
 
 export default function Home() {
@@ -18,6 +19,10 @@ export default function Home() {
 
       <Reveal>
         <Gallery />
+      </Reveal>
+
+      <Reveal>
+        <ViewMore />
       </Reveal>
 
       <Footer />

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Playfair_Display } from "next/font/google";
 import { motion } from "framer-motion";
@@ -34,9 +35,21 @@ export default function Hero() {
           <span className="font-bold text-4xl sm:text-8xl"> GALLERY</span>
         </div>
       </div>
-      <span className="absolute bottom-20 left-0 text-lg ml-4 mb-4">
-        scroll down ↓
-      </span>
+      <div className="absolute bottom-20 left-0 text-md ml-4 mb-4">
+        <motion.div
+          initial={{ y: 0 }}
+          animate={{
+            y: -15,
+            transition: {
+              repeat: Infinity,
+              repeatType: "reverse",
+              duration: 0.35,
+            },
+          }}
+        >
+          scroll down ↓
+        </motion.div>
+      </div>
     </section>
   );
 }
