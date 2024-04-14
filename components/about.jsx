@@ -1,7 +1,11 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+
+import GradientCursor from "./cursor/cursor";
+
 export default function About() {
+  // const [ isActive, setActive ] = useState(false)
   return (
     <section className="mb-28 mt-20 px-12 !scroll-mt-12 ">
       <div className="flex flex-col sm:flex-row gap-10">
@@ -57,6 +61,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      {/* <GradientCursor isActive={setActive} /> */}
     </section>
   );
 }
