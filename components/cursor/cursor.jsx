@@ -8,7 +8,6 @@ const colors = [
     "#457ec4",
     "#0067FF",
 ]
-
 export default function GradientCursor({isActive}) {
     const mouse = useRef({x: 0, y: 0});
     const delayedMouse = useRef({x: 0, y: 0});
@@ -58,7 +57,7 @@ export default function GradientCursor({isActive}) {
     }, [isActive])
 
     return (
-        <div className='absolute h-screen'>
+        <div className='absolute h-screen' style={{ pointerEvents: 'none' }}>
             {
                 [...Array(4)].map((_, i) => {
                     return (

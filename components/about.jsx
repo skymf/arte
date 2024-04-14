@@ -1,13 +1,16 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-
 import GradientCursor from "./cursor/cursor";
+import { useState } from "react";
 
 export default function About() {
-  // const [ isActive, setActive ] = useState(false)
+  const [isActive, setIsActive] = useState(false)
+
   return (
-    <section className="mb-28 mt-20 px-12 !scroll-mt-12 ">
+    <section className="mb-28 px-12 !scroll-mt-12 ">
+            {/* <GradientCursor isActive = {isActive} /> */}
+
       <div className="flex flex-col sm:flex-row gap-10">
         {/* the image */}
         <div className="flex flex-col gap-2">
@@ -17,6 +20,8 @@ export default function About() {
             height="600"
             alt="ae"
             className="rounded-[5px] "
+            onMouseOver={() => {setIsActive(true)}} 
+            onMouseLeave={() => {setIsActive(false)}} 
           />
           <span className="text-xs sm:text-sm">
             YOUR IMAGE REIMAGINED - W PLAY - IDK WHAT TO SAY
