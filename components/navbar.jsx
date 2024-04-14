@@ -59,7 +59,7 @@ const navLinks = [
                         {"L'ARTEGALLERY"}
                     </div>
                 </Link>
-                    <div className="lg:flex hidden gap-12 text-md text-zinc-400 font-medium">
+                    <div className="lg:flex hidden gap-12 text-md text-[#aeab7b] font-medium">
                         <Link href={`/projects`}>
                         <AnimatedLink title={"FEW PRETTY WORKS"} />
                         </Link>
