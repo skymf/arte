@@ -3,7 +3,7 @@ import Hero from "@/components/hero";
 import About from "@/components/about";
 import Reveal from "@/components/reveal";
 import Gallery from "@/components/gallery";
-import ViewMore from "@/components/viewMore";
+import ViewMore from "@/components/viewmore";
 import Footer from "@/components/footer";
 
 export default function Home() {
