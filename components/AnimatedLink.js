@@ -11,9 +11,17 @@ export default function AnimatedLink({ title }) {
       onMouseLeave={() => setHovered(false)}
       className="relative overflow-hidden cursor-pointer"
     >
-      <AnimatedWord title={title} animation={letterAnimation} isHovered={isHovered} />
+      <AnimatedWord
+        title={title}
+        animation={letterAnimation}
+        isHovered={isHovered}
+      />
       <div className="absolute top-0">
-        <AnimatedWord title={title} animation={letterAnimationTwo} isHovered={isHovered} />
+        <AnimatedWord
+          title={title}
+          animation={letterAnimationTwo}
+          isHovered={isHovered}
+        />
       </div>
     </motion.div>
   );
@@ -22,12 +30,12 @@ export default function AnimatedLink({ title }) {
 const titleAnimation = {
   rest: {
     transition: {
-      staggerChildren: 0.003,
+      staggerChildren: 0.005,
     },
   },
   hover: {
     transition: {
-      staggerChildren: 0.003,
+      staggerChildren: 0.005,
     },
   },
 };
@@ -80,12 +88,19 @@ const AnimatedWord = ({ title, animation, isHovered }) => {
       animate={isHovered ? "hover" : "rest"}
       className="whitespace-nowrap relative"
     >
-      {title.split("").map((character, i) =>
-  character === " " ? (
-    <span key={i}>&nbsp;</span>
-  ) : (
-    <AnimatedLetter key={character + i} character={character} animation={animation} />  )
-)}
+      {title
+        .split("")
+        .map((character, i) =>
+          character === " " ? (
+            <span key={i}>&nbsp;</span>
+          ) : (
+            <AnimatedLetter
+              key={character + i}
+              character={character}
+              animation={animation}
+            />
+          ),
+        )}
     </motion.span>
   );
 };

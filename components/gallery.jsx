@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { FiMousePointer } from "react-icons/fi";
 
@@ -33,12 +33,12 @@ const TiltCard = ({ item }) => {
   const rotateX = useTransform(
     mouseYSpring,
     [-0.75, 0.75],
-    ["7.5deg", "-7.5deg"]
+    ["7.5deg", "-7.5deg"],
   );
   const rotateY = useTransform(
     mouseXSpring,
     [-0.75, 0.75],
-    ["-7.5deg", "7.5deg"]
+    ["-7.5deg", "7.5deg"],
   );
 
   const handleMouseMove = (e) => {
@@ -81,19 +81,13 @@ const TiltCard = ({ item }) => {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
-        className="absolute inset-5 flex flex-col items-end justify-end p-5 rounded-xl text-[#F3F1EB] "
+        className="absolute opacity-95 inset-5 flex flex-col items-end justify-end p-5 rounded-xl text-[#F3F1EB] "
       >
-        <FiMousePointer
-          style={{
-            transform: "translateZ(75px)",
-          }}
-          className="mx-auto text-4xl"
-        />
         <h2
           style={{
             transform: "translateZ(50px)",
           }}
-          className="text-center text-2xl font-bold"
+          className="text-center text-xl font-bold"
         >
           {item.title}
         </h2>
@@ -105,22 +99,22 @@ const TiltCard = ({ item }) => {
 const items = [
   {
     url: "/23e1.jpg",
-    title: "graphic design",
+    title: "GRAPHIC DESIGN",
     id: 1,
   },
   {
     url: "/8932jkhsbfjrui321.png",
-    title: "vfx editing",
+    title: "VFX EDIT",
     id: 2,
   },
   {
     url: "/282acccdeifa192.jpg",
-    title: "3D modeling",
+    title: "3D MODELING",
     id: 3,
   },
   {
     url: "/b0b78a531c06d6795ca61748fc027b34.jpg",
-    title: "je ne sais pas",
+    title: "JE NE SAIS PAS",
     id: 4,
   },
   {
