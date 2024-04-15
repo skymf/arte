@@ -30,11 +30,11 @@ export default function Hey() {
       </Reveal>
       {/* gallery */}
       <Reveal>
-        <Gallery setisActive = {setisActive} />
+        <Gallery setisActive={setisActive} />
       </Reveal>
       {/* view more */}
       <Reveal>
-        <ViewMore />
+        <ViewMore setisActive={setisActive} />
       </Reveal>
       {/* footer */}
       <Footer />

@@ -1,9 +1,8 @@
 "use client";
-import React from "react";
 import { BsArrowRight } from "react-icons/bs";
 import Link from "next/link";
 
-export default function ViewMore() {
+export default function ViewMore({ setisActive }) {
   return (
     <section className="mt-20 mb-28 px-12">
       <div className="flex flex-col gap-12">
@@ -22,6 +21,12 @@ export default function ViewMore() {
           <Link
             href="#contact"
             className="group flex items-center px-3 h-10 sm:h-12 w-auto max-w-xs sm:max-w-max rounded-full border border-[#aeab7b] font-medium text-base outline-none focus:scale-110 hover:scale-110 hover:bg-[#aeab7b] hover:text-[#F3F1EB] active:scale-105 transition"
+            onMouseOver={() => {
+              setisActive(true);
+            }}
+            onMouseLeave={() => {
+              setisActive(false);
+            }}
           >
             Dive in the deep
             <BsArrowRight className="ml-1.5 -translate-x-1 opacity-75 group-hover:translate-x-2 group-hover:text-[#F3F1EB] transition" />

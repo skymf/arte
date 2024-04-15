@@ -44,20 +44,14 @@ export default function About({ setisActive }) {
               {/* text */}
               <div className="max-w-[45rem] font-medium text-sm sm:text-base">
                 <p>
-                  Here is my website. bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla blabla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla blabla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla blabla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla blabla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                  Here is my website. It is still under construction and a lot
+                  of stuff needs to be fixed. E.g. the UI, responsiveness,
+                  motion, other pages, more components or yes, and just a
+                  pleasing website yay.
+                  <br /> bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                   bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
                   blabla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla blabla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                  bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                  bla bla bla bla bla bla bla bla bla bla bla
                 </p>
               </div>
             </div>
