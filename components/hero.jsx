@@ -3,14 +3,10 @@ import React from "react";
 import { Playfair_Display } from "next/font/google";
 import { motion } from "framer-motion";
 const pd = Playfair_Display({ style: "italic", subsets: ["latin"] });
-import GradientCursor from "./cursor/cursor";
-import { useState } from "react";
 
 export default function Hero({ setisActive }) {
-  // const [isActive, setIsActive] = useState(false);
   return (
     <section className="relative flex flex-col w-full h-screen justify-center select-none items-center px-12">
-      {/* <GradientCursor isActive={isActive} /> */}
       {/* intro? */}
       <div className="items-center">
         <span

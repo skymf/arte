@@ -111,7 +111,7 @@ const TiltCard = ({ item }) => {
 const items = [
   {
     url: "/23e1.jpg",
-    title: "EHMM",
+    title: "MY WISHLIST? // EHM ",
     id: 1,
   },
   // {
@@ -125,18 +125,18 @@ const items = [
   //   id: 3,
   // },
   {
-    url: "/b0b78a531c06d6795ca61748fc027b34.jpg",
+    url: "/o.jpg",
     title: "JE NE SAIS PAS",
     id: 3,
   },
   {
-    url: "/282acccdeifa192.jpg",
-    title: "APP DESIGN",
+    url: "/heyyy.jpg",
+    title: "CHECK CINEMA",
     id: 4,
   },
   {
     url: "/mm.jpg",
-    title: "WEB DESIGN",
+    title: "WEB DESIGN ???",
     id: 5,
   },
 ];
