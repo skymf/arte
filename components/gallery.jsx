@@ -4,7 +4,6 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import Link from "next/link";
 
 export default function Gallery() {
-  // const [isActive, setActive] = useState(false);
   return (
     <section className="mt-20 mb-28 px-12">
       <div className="flex flex-col">
@@ -26,9 +25,6 @@ export default function Gallery() {
           <Link href="/projects/cars">
             <TiltCard item={items[3]} />
           </Link>
-          {/* dont want these */}
-          {/* <TiltCard item={items[4]} />
-          <TiltCard item={items[5]} /> */}
         </div>
       </div>
     </section>
