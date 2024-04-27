@@ -6,7 +6,7 @@ const pd = Playfair_Display({ style: "italic", subsets: ["latin"] });
 
 export default function Hero({ setisActive }) {
   return (
-    <section className="relative flex flex-col w-full h-screen justify-center select-none items-center px-12">
+    <section className="relative -mt-10 flex flex-col w-full h-screen justify-center select-none items-center px-12">
       {/* intro? */}
       <div className="items-center">
         <span

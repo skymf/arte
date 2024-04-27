@@ -1,6 +1,7 @@
 "use client";
 import React, { useLayoutEffect, useRef, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Playfair_Display } from "next/font/google";
@@ -80,13 +81,31 @@ export default function Index() {
             </span>
           </p>
 
-          <div className="mt-16 h-auto">
-            <div className="flex flex-row justify-between">
-              <div className="flex flex-col">
-                hi add some card display so the movies are scrollable, or
-                horizontal, or another parralex scroll thingy
+          <div className="h-screen relative">
+            <div className="flex flex-row justify-between mt-8">
+              <div className="flex flex-col gap-5 w-1/2">
+                <span className="text-md font-medium">
+                  hi add some card display so the movies are scrollable, or
+                  horizontal, or another parralex scroll thingy. Now its getting
+                  messy hi
+                </span>
+                <Link
+                  href="#"
+                  className="group relative flex h-12 w-72 cursor-pointer items-center justify-center gap-4 rounded-full border border-solid border-[#aeab7b]"
+                >
+                  <div className="absolute left-5 z-0 h-2 w-2 rounded-full bg-[#aeab7b] transition-all duration-300 ease-in-out group-hover:left-0 group-hover:h-full group-hover:w-full"></div>
+                  <p className="absolute right-5 z-10 font-bold text-md uppercase transition-all duration-300 ease-in-out group-hover:right-8 group-hover:text-[#4C0611]">
+                    visit a different website
+                  </p>
+                </Link>
               </div>
-              <Image src={"/mm.jpg"} height={400} width={400} />
+              <div className="flex flex-col gap-3">
+                <Image src={"/mm.jpg"} height={400} width={400} />
+                <span className="w-[400px] rounded-full border-t-2 border-[#aeab7b]"></span>
+                <span className="-mt-2 flex items-center uppercase text-xs font-semibold sm:text-sm">
+                  cars • je ne sais pas • ???
+                </span>
+              </div>
             </div>
           </div>
         </div>
