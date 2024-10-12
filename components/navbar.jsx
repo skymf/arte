@@ -3,6 +3,7 @@ import Link from "next/link";
 import { React, useState } from "react";
 import AnimatedLink from "./AnimatedLink";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTransitionRouter } from "next-transition-router";
 
 const navLinks = [
   { title: "Home", href: "/", key: "hero" },
@@ -51,10 +52,12 @@ const Navbar = () => {
     },
   };
 
+  const { back } = useTransitionRouter();
+
   return (
     <header className="">
       <nav className="top-0 flex justify-between items-center py-8 lg:py-4 px-12">
-        <Link href="/" className="flex flex-row gap-2">
+        <Link href="/" className="flex flex-row gap-2" data-transition-ignore>
           <div className="font-bold text-xl">{"L'ARTEGALLERY"}</div>
         </Link>
         <div className="lg:flex hidden gap-12 text-md text-[#aeab7b] font-medium">

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import Link from "next/link";
+import { Link } from "next-transition-router";
 
 export default function Gallery() {
   return (
@@ -10,7 +10,7 @@ export default function Gallery() {
         <h1 className="text-4xl font-bold">MY PROJECTS</h1>
 
         <div className="grid md:gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 w-full md:pr-12">
-          <Link href="/projects/star_wars">
+          <Link href="/projects/">
             <TiltCard item={items[0]} />
           </Link>
 
@@ -22,7 +22,7 @@ export default function Gallery() {
             <TiltCard item={items[2]} />
           </Link>
 
-          <Link href="/projects/cars">
+          <Link href="/projects/cars" data-transition-ignore>
             <TiltCard item={items[3]} />
           </Link>
         </div>

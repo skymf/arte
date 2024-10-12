@@ -3,6 +3,8 @@ import { Work_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import { Analytics } from "@vercel/analytics/react";
+import { Providers } from "./providers";
+import { Debug } from "@/components/debug";
 
 const works = Work_Sans({ subsets: ["latin"] });
 
@@ -17,11 +19,14 @@ export default function RootLayout({ children }) {
       <body
         className={`relative h-full antialiased bg-[#4C0611] text-[#aeab7b] !scroll-smooth ${works.className}`}
       >
-        <div className="h-full flex flex-col">
-          <Navbar />
-          <main className="">{children}</main>
-          <Analytics />
-        </div>
+        <Providers>
+          <div className="h-full flex flex-col">
+            <Navbar />
+            <main className="">{children}</main>
+            <Analytics />
+          </div>
+          <Debug />
+        </Providers>
       </body>
     </html>
   );
