@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useLayoutEffect, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -16,6 +17,7 @@ export default function Index() {
       const locomotiveScroll = new LocomotiveScroll();
     })();
   }, []);
+
   const background = useRef(null);
   const introImage = useRef(null);
   const homeHeader = useRef(null);
@@ -38,7 +40,7 @@ export default function Index() {
   }, []);
 
   return (
-    <section className="px-12 relative">
+    <section className="px-4 sm:px-8 md:px-12 relative -z-0">
       <div ref={homeHeader} className="relative w-full flex justify-center">
         <div className="relative flex justify-center mt-[10vh]">
           <div
@@ -52,58 +54,57 @@ export default function Index() {
               alt="ehm omg"
               width={400}
               height={400}
-              className="object-cover object-top rounded-[12.4px] -z-10 "
+              className="object-cover object-top rounded-[12.4px] -z-10"
             />
           </div>
           <div className="text-center w-full relative z-10">
-            <h1 className="text-9xl font-bold z-10 whitespace-nowrap">
+            <h1 className="text-5xl sm:text-7xl md:text-9xl font-bold z-10 whitespace-nowrap">
               CINEMA
             </h1>
-            <p className="text-left text-xs italic absolute left-0 top-0 mt-4 ml-[-8vw] md:ml-[-11vw]">
+            <p className="text-left text-[8px] sm:text-xs md:text-sm italic absolute left-0 top-0 mt-4 ml-[-8vw] md:ml-[-11vw]">
               FOR THE CINEPHILES
             </p>
-            <p className="text-right text-xs italic absolute right-0 bottom-0 sm:mr-[-1vw] md:mr-[-17vw]">
+            <p className="text-right text-[8px] sm:text-xs md:text-sm italic absolute right-0 bottom-0 sm:mr-[-1vw] md:mr-[-17vw]">
               WHAT IS YOUR FAVORITE MOVIE?
             </p>
           </div>
         </div>
       </div>
-      <div className="relative mb-28 mt-[38vw] sm:mt-[45vw]">
+      <div className="relative mb-28 mt-[50vw] sm:mt-[45vw] md:mt-[35vw]">
         <div className="flex flex-col">
-          <p className="text-3xl font-medium">
+          <p className="text-xl sm:text-2xl md:text-3xl font-medium">
             THE FOLLOWING MOVIES ARE PRETTY GREAT, <br /> CINEMATOGRAPHY,
             DESIGN, CAMERA SHOTS <br />
             <span
-              className={`font-bold text-3xl sm:text-5xl italic ${pd.className}`}
+              className={`font-bold text-2xl sm:text-4xl md:text-5xl italic ${pd.className}`}
             >
               {" "}
               {"IT'S ART "}
             </span>
           </p>
 
-          <div className="h-screen relative">
-            <div className="flex flex-row justify-between mt-8">
-              <div className="flex flex-col gap-5 w-1/2">
-                <span className="text-md font-medium">
-                  hi add some card display so the movies are scrollable, or
-                  horizontal, or another parralex scroll thingy. Now its getting
-                  messy hi
+          <div className="h-auto md:h-screen relative">
+            <div className="flex flex-col md:flex-row justify-between mt-8">
+              <div className="flex flex-col gap-5 w-full md:w-1/2">
+                <span className="text-sm md:text-md font-medium">
+                  Add some card display so the movies are scrollable,
+                  horizontal, or use parallax scrolling.
                 </span>
                 <Link
                   href="#"
-                  className="group relative flex h-12 w-72 cursor-pointer items-center justify-center gap-4 rounded-full border border-solid border-[#aeab7b]"
+                  className="group relative flex h-10 sm:h-12 w-64 sm:w-72 cursor-pointer items-center justify-center gap-4 rounded-full border border-solid border-[#aeab7b]"
                 >
                   <div className="absolute left-5 z-0 h-2 w-2 rounded-full bg-[#aeab7b] transition-all duration-300 ease-in-out group-hover:left-0 group-hover:h-full group-hover:w-full"></div>
-                  <p className="absolute right-5 z-10 font-bold text-md uppercase transition-all duration-300 ease-in-out group-hover:right-8 group-hover:text-[#4C0611]">
-                    visit a different website
+                  <p className="absolute right-5 z-10 font-bold text-sm sm:text-md uppercase transition-all duration-300 ease-in-out group-hover:right-8 group-hover:text-[#4C0611]">
+                    Visit a different website
                   </p>
                 </Link>
               </div>
-              <div className="flex flex-col gap-3">
-                <Image src={"/mm.jpg"} height={400} width={400} />
-                <span className="w-[400px] rounded-full border-t-2 border-[#aeab7b]"></span>
+              <div className="flex flex-col gap-3 w-full md:w-auto mt-6 md:mt-0">
+                <Image src={"/mm.jpg"} height={300} width={300} alt="Image" />
+                <span className="w-full sm:w-[400px] rounded-full border-t-2 border-[#aeab7b]"></span>
                 <span className="-mt-2 flex items-center uppercase text-xs font-semibold sm:text-sm">
-                  cars • je ne sais pas • ???
+                  Cars • Je ne sais pas • ???
                 </span>
               </div>
             </div>

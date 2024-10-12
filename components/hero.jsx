@@ -3,8 +3,33 @@ import React from "react";
 import { Playfair_Display } from "next/font/google";
 import { motion } from "framer-motion";
 const pd = Playfair_Display({ style: "italic", subsets: ["latin"] });
+import { useEffect, useState } from "react";
 
 export default function Hero({ setisActive }) {
+  const [localTime, setLocalTime] = useState(
+    new Date().toLocaleString("en-US", {
+      timeZone: "Europe/Amsterdam",
+      hour: "numeric",
+      minute: "numeric",
+      hour12: true,
+    }),
+  );
+  const [flash, setFlash] = useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const amsterdamTime = new Date().toLocaleString("en-US", {
+        timeZone: "Europe/Amsterdam",
+        hour: "numeric",
+        minute: "numeric",
+        hour12: true,
+      });
+      setLocalTime(amsterdamTime);
+      setFlash((prevState) => !prevState);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative -mt-10 flex flex-col w-full h-screen justify-center select-none items-center px-12">
       {/* intro? */}
@@ -17,6 +42,8 @@ export default function Hero({ setisActive }) {
           onMouseLeave={() => {
             setisActive(false);
           }}
+          data-scroll
+          data-scroll-speed="0.05"
         >
           WELCOME TO MY
         </span>
@@ -28,6 +55,8 @@ export default function Hero({ setisActive }) {
           onMouseLeave={() => {
             setisActive(false);
           }}
+          data-scroll
+          data-scroll-speed="0.025"
         >
           {" "}
           OH SO PRETTY OR BEAUTIFUL?{" "}
@@ -42,6 +71,8 @@ export default function Hero({ setisActive }) {
             onMouseLeave={() => {
               setisActive(false);
             }}
+            data-scroll
+            data-scroll-speed="0.025"
           >
             {" "}
             ART
@@ -58,6 +89,8 @@ export default function Hero({ setisActive }) {
               onMouseLeave={() => {
                 setisActive(false);
               }}
+              data-scroll
+              data-scroll-speed="0.05"
             >
               {" "}
               THIS WEBSITE CONTAINS A LOT OF WORK <br />
@@ -78,20 +111,34 @@ export default function Hero({ setisActive }) {
           </span>
         </div>
       </div>
-      <div className="absolute bottom-20 left-0 text-xs ml-4 mb-4">
-        <motion.div
-          initial={{ y: 0 }}
-          animate={{
-            y: -15,
-            transition: {
-              repeat: Infinity,
-              repeatType: "reverse",
-              duration: 0.35,
-            },
-          }}
-        >
-          {" ( SCROLL ↓ ) "}
-        </motion.div>
+      <div className="absolute bottom-20 flex flex-row gap-[52rem]">
+        <div className="left-0 text-xs ml-4 mb-4">
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{
+              y: -15,
+              transition: {
+                repeat: Infinity,
+                repeatType: "reverse",
+                duration: 0.37,
+              },
+            }}
+          >
+            {" ( SCROLL ↓ ) "}
+          </motion.div>
+        </div>
+        <div className="right-0 text-xs mr-4 mb-4">
+          <span
+            data-scroll
+            data-scroll-speed="0.015"
+            className="text-xs font-mono uppercase"
+          >
+            {" "}
+            local time:
+            {"[ "}
+            {localTime.replace(":", flash ? " " : ":")} {"]"}
+          </span>
+        </div>
       </div>
     </section>
   );

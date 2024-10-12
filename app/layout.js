@@ -21,11 +21,11 @@ export default function RootLayout({ children }) {
       >
         <Providers>
           <div className="h-full flex flex-col">
-            <Navbar />
+            <Navbar className="z-50" />
             <main className="">{children}</main>
             <Analytics />
           </div>
-          <Debug />
+          {/* <Debug /> */}
         </Providers>
       </body>
     </html>

@@ -7,7 +7,11 @@ export default function About({ setisActive }) {
     <section className="mb-28 px-4 sm:px-8 md:px-12 !scroll-mt-12">
       <div className="flex flex-col sm:flex-row gap-10">
         {/* Image Section */}
-        <div className="flex flex-col gap-2">
+        <div
+          className="flex flex-col gap-2"
+          data-scroll
+          data-scroll-speed="0.05"
+        >
           <Image
             src="/282acccdeifa192.jpg"
             width={400}
@@ -25,8 +29,8 @@ export default function About({ setisActive }) {
         {/* Content Section */}
         <div className="flex flex-col gap-3">
           {/* Title */}
-          <h1 className="font-bold text-2xl sm:text-3xl md:text-4xl">
-            THIS GALLERY!
+          <h1 className="font-bold text-2xl  uppercase sm:text-3xl md:text-4xl">
+            this gallery contains nothing
           </h1>
 
           {/* Buttons and Description */}

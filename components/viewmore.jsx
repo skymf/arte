@@ -18,7 +18,12 @@ export default function ViewMore({ setisActive }) {
             all wrapped up in dazzling animations!
           </span>
           {/* button */}
-          <Link
+          <Link href="/">
+            <button className="rounded-2xl border-2 border-[#2A2A2B] bg-[#d4cdc3] px-6 py-3 font-semibold uppercase text-[#2A2A2B] transition-all duration-300 hover:translate-x-[-4px] hover:translate-y-[-4px] hover:rounded-md hover:shadow-[4px_4px_0px_#2A2A2B] active:translate-x-[0px] active:translate-y-[0px] active:rounded-2xl active:shadow-none">
+              view the collection
+            </button>
+          </Link>
+          {/* <Link
             href="#contact"
             className="group flex items-center px-3 h-10 sm:h-12 w-auto max-w-xs sm:max-w-max rounded-full border border-[#aeab7b] font-medium text-base outline-none focus:scale-110 hover:scale-110 hover:bg-[#aeab7b] hover:text-[#F3F1EB] active:scale-105 transition"
             onMouseOver={() => {
@@ -30,7 +35,7 @@ export default function ViewMore({ setisActive }) {
           >
             Dive in the deep
             <BsArrowRight className="ml-1.5 -translate-x-1 opacity-75 group-hover:translate-x-2 group-hover:text-[#F3F1EB] transition" />
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
