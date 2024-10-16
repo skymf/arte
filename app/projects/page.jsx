@@ -101,8 +101,14 @@ export default function Index() {
                 </Link>
               </div>
               <div className="flex flex-col gap-3 w-full md:w-auto mt-6 md:mt-0">
-                <Image src={"/mm.jpg"} height={300} width={300} alt="Image" />
-                <span className="w-full sm:w-[400px] rounded-full border-t-2 border-[#aeab7b]"></span>
+                <Image
+                  src={"/mm.jpg"}
+                  height={300}
+                  width={300}
+                  alt="Image"
+                  className="rounded"
+                />
+                <span className="w-full  rounded-full border-t-2 border-[#aeab7b]"></span>
                 <span className="-mt-2 flex items-center uppercase text-xs font-semibold sm:text-sm">
                   Cars • Je ne sais pas • ???
                 </span>

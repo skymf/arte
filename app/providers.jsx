@@ -23,7 +23,7 @@ export function Providers({ children }) {
             { y: "100%" },
             {
               y: 0,
-              duration: 0.75,
+              duration: 0.5,
               ease: "circ.inOut",
             },
           )
@@ -34,7 +34,7 @@ export function Providers({ children }) {
             },
             {
               y: 0,
-              duration: 1,
+              duration: 0.5,
               ease: "circ.inOut",
             },
             "<50%",
@@ -52,7 +52,7 @@ export function Providers({ children }) {
             { y: 0 },
             {
               y: "-100%",
-              duration: 1,
+              duration: 0.5,
               ease: "circ.inOut",
             },
           )
@@ -61,7 +61,7 @@ export function Providers({ children }) {
             { y: 0 },
             {
               y: "-100%",
-              duration: 1,
+              duration: 0.5,
               ease: "circ.inOut",
             },
             "<50%",
@@ -77,11 +77,11 @@ export function Providers({ children }) {
 
       <div
         ref={firstLayer}
-        className="fixed inset-0 z-50 translate-y-full bg-blue-950"
+        className="fixed inset-0 z-50 translate-y-full bg-[#aeab7b]"
       />
       <div
         ref={secondLayer}
-        className="fixed inset-0 z-50 translate-y-full bg-green-950"
+        className="fixed inset-0 z-50 translate-y-full bg-[#4C0611]"
       />
     </TransitionRouter>
   );
